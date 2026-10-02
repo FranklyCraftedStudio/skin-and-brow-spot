@@ -8,8 +8,10 @@
   <meta property="og:title" content="The Skin and Brow Spot | Countryside Skin &amp; Brow Studio" />
   <meta property="og:description" content="Personalized skin, brow and lash services from the team at The Skin and Brow Spot in Countryside. Book your visit on Fresha." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.fresha.com/locations/location-profile-images/75206/2515150/3d0826af-0420-4f3d-a21b-f008dca610c3-TheSkinandBrowSpot-US-Illinois-Countryside-Fresha.jpg?class=venue-gallery-large&amp;f_width=1200&amp;f_quality=80" />
+  <meta property="og:image" content="https://franklycraftedstudio.github.io/skin-and-brow-spot/assets/studio-logo.jpg" />
   <title>The Skin and Brow Spot | Skin &amp; Brow Studio in Countryside</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -77,21 +79,18 @@
     .wordmark {
       display: inline-flex;
       align-items: center;
-      gap: 0.8rem;
+      gap: 0.65rem;
       color: var(--ink);
       text-decoration: none;
     }
 
-    .wordmark-mark {
-      width: 40px;
-      height: 40px;
-      display: grid;
-      place-items: center;
-      border: 1px solid var(--rose);
-      border-radius: 50%;
-      color: var(--rose-dark);
-      font-family: var(--serif);
-      font-size: 1.15rem;
+    .wordmark-logo {
+      width: 72px;
+      height: 72px;
+      flex: 0 0 auto;
+      display: block;
+      object-fit: contain;
+      mix-blend-mode: multiply;
     }
 
     .wordmark-name {
@@ -626,7 +625,24 @@
       border-top: 1px solid #eee6e0;
       color: var(--muted);
       font-size: 0.78rem;
-      text-align: center;
+    }
+
+    .site-footer-inner {
+      width: min(1080px, 100%);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+    }
+
+    .footer-logo {
+      width: 52px;
+      height: 52px;
+      flex: 0 0 auto;
+      display: block;
+      object-fit: contain;
+      mix-blend-mode: multiply;
     }
 
     .site-footer p {
@@ -668,8 +684,26 @@
     @media (max-width: 760px) {
       .nav-wrap {
         width: min(100% - 2rem, 600px);
-        min-height: 72px;
+        min-height: 68px;
         gap: 1rem;
+      }
+
+      .wordmark {
+        gap: 0.45rem;
+      }
+
+      .wordmark-logo {
+        width: 54px;
+        height: 54px;
+      }
+
+      .wordmark-name {
+        font-size: 0.84rem;
+      }
+
+      .wordmark-name span {
+        font-size: 0.52rem;
+        letter-spacing: 0.12em;
       }
 
       .main-nav {
@@ -682,7 +716,8 @@
 
       .main-nav .nav-cta {
         min-height: 40px;
-        padding: 0.55rem 0.95rem;
+        padding: 0.5rem 0.7rem;
+        font-size: 0.72rem;
       }
 
       .hero {
@@ -770,6 +805,34 @@
         grid-template-columns: 1fr;
         gap: 2rem;
       }
+
+      .site-footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .nav-wrap {
+        gap: 0.6rem;
+      }
+
+      .wordmark-logo {
+        width: 48px;
+        height: 48px;
+      }
+
+      .wordmark-name {
+        font-size: 0.78rem;
+      }
+
+      .wordmark-name span {
+        display: none;
+      }
+
+      .main-nav .nav-cta {
+        padding: 0.45rem 0.6rem;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -789,7 +852,7 @@
   <header class="site-header">
     <div class="nav-wrap">
       <a class="wordmark" href="#home" aria-label="The Skin and Brow Spot home">
-        <span class="wordmark-mark" aria-hidden="true">S</span>
+        <img class="wordmark-logo" src="assets/studio-logo.jpg" alt="" />
         <span class="wordmark-name">The Skin and Brow Spot<span>Skin · Brows · Beauty</span></span>
       </a>
       <nav class="main-nav" aria-label="Main navigation">
@@ -965,7 +1028,10 @@
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year">2026</span> The Skin and Brow Spot · Countryside · <a href="https://www.fresha.com/a/the-skin-and-brow-spot-countryside-5508-south-brainard-avenue-zenor27i">Book on Fresha</a></p>
+    <div class="site-footer-inner">
+      <img class="footer-logo" src="assets/studio-logo.jpg" alt="" loading="lazy" decoding="async" />
+      <p>&copy; <span id="year">2026</span> The Skin and Brow Spot · Countryside · <a href="https://www.fresha.com/a/the-skin-and-brow-spot-countryside-5508-south-brainard-avenue-zenor27i">Book on Fresha</a></p>
+    </div>
   </footer>
 </body>
 </html>
