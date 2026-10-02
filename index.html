@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#f6f1ec" />
-  <meta name="description" content="Book skin and brow services with The Skin and Brow Spot, a Countryside studio led by a licensed esthetician with 10 years of experience." />
+  <meta name="description" content="Explore brow shaping, facials, waxing, lashes, microblading and more at The Skin and Brow Spot in Countryside. Book online through Fresha." />
+  <meta property="og:title" content="The Skin and Brow Spot | Countryside Skin &amp; Brow Studio" />
+  <meta property="og:description" content="Personalized skin, brow and lash services from a licensed esthetician with 10 years of experience. Book your visit on Fresha." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.fresha.com/locations/location-profile-images/75206/2515150/3d0826af-0420-4f3d-a21b-f008dca610c3-TheSkinandBrowSpot-US-Illinois-Countryside-Fresha.jpg?class=venue-gallery-large&amp;f_width=1200&amp;f_quality=80" />
   <title>The Skin and Brow Spot | Skin &amp; Brow Studio in Countryside</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -164,7 +168,7 @@
     .hero {
       min-height: 650px;
       display: grid;
-      grid-template-columns: 1fr 0.92fr;
+      grid-template-columns: 0.92fr 1.08fr;
       background: var(--cream);
     }
 
@@ -295,13 +299,13 @@
 
     .service-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 1.15rem;
       text-align: left;
     }
 
     .service-card {
-      min-height: 250px;
+      min-height: 270px;
       padding: 2rem;
       border: 1px solid #eee6e0;
       background: #fff;
@@ -385,14 +389,183 @@
       margin-top: 0.8rem;
     }
 
+    .gallery {
+      padding: 6.5rem 0 7rem;
+      background: var(--cream);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, minmax(170px, 230px));
+      gap: 0.85rem;
+    }
+
+    .gallery-item {
+      min-width: 0;
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      border-radius: 2px;
+      background: var(--sand);
+    }
+
+    .gallery-item:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform 350ms ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.035);
+    }
+
+    .gallery-item figcaption {
+      position: absolute;
+      right: 0.75rem;
+      bottom: 0.75rem;
+      left: 0.75rem;
+      width: fit-content;
+      max-width: calc(100% - 1.5rem);
+      padding: 0.45rem 0.7rem;
+      color: var(--ink);
+      background: rgba(255, 253, 251, 0.92);
+      font-size: 0.75rem;
+      line-height: 1.35;
+    }
+
+    .gallery-credit {
+      margin: 1rem 0 0;
+      color: var(--muted);
+      font-size: 0.76rem;
+    }
+
+    .gallery-credit a,
+    .review-source a {
+      color: var(--rose-dark);
+      text-underline-offset: 0.18em;
+    }
+
+    .reviews {
+      padding: 6.5rem 0 7rem;
+    }
+
+    .review-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .review-heading .section-intro {
+      margin: 0;
+      text-align: left;
+    }
+
+    .review-heading .section-intro .eyebrow {
+      justify-content: flex-start;
+    }
+
+    .rating-card {
+      flex: 0 0 auto;
+      display: inline-block;
+      min-width: 205px;
+      margin-top: 1.5rem;
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--sand);
+      background: var(--cream);
+      border-radius: 2px;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .rating-card strong {
+      display: block;
+      color: var(--rose-dark);
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .rating-card span {
+      color: var(--muted);
+      font-size: 0.76rem;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .review-card {
+      min-height: 215px;
+      display: flex;
+      flex-direction: column;
+      padding: 1.6rem;
+      border: 1px solid #eee6e0;
+      background: #fff;
+    }
+
+    .review-card .review-stars {
+      margin-bottom: 1rem;
+      color: var(--rose);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+    }
+
+    .review-card .review-stars span {
+      display: block;
+    }
+
+    .review-card .review-stars span[aria-hidden="true"] {
+      display: inline;
+    }
+
+    .review-card p {
+      margin-bottom: 1.5rem;
+      color: var(--muted);
+      font-family: var(--serif);
+      font-size: 1.12rem;
+      line-height: 1.55;
+    }
+
+    .review-card footer {
+      margin-top: auto;
+      color: var(--ink);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .review-source {
+      margin: 1.25rem 0 0;
+      color: var(--muted);
+      font-size: 0.76rem;
+    }
+
     .visit {
       padding: 6.5rem 0;
-      text-align: center;
+      background: var(--cream);
+    }
+
+    .visit-inner {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      align-items: center;
+      gap: clamp(2rem, 7vw, 6rem);
     }
 
     .visit-content {
-      max-width: 650px;
-      margin: 0 auto;
+      max-width: 480px;
     }
 
     .visit-content > p:not(.eyebrow) {
@@ -400,10 +573,9 @@
     }
 
     .contact-card {
-      margin-top: 2rem;
-      padding: 1.5rem;
-      border: 1px solid var(--sand);
-      background: var(--cream);
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      border: 1px solid #e3d7cc;
+      background: var(--paper);
     }
 
     .contact-card strong {
@@ -415,9 +587,38 @@
     }
 
     .contact-card p {
-      margin-bottom: 0;
+      margin-bottom: 0.75rem;
       color: var(--muted);
       font-size: 0.9rem;
+    }
+
+    .contact-card a:not(.button) {
+      color: var(--rose-dark);
+      text-underline-offset: 0.18em;
+    }
+
+    .contact-card .hours {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.35rem 1.5rem;
+      margin: 1.25rem 0 1rem;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .contact-card .hours dt,
+    .contact-card .hours dd {
+      margin: 0;
+    }
+
+    .contact-card .hours dd {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .contact-card .hours-note {
+      margin-bottom: 1.2rem;
+      font-size: 0.76rem;
     }
 
     .site-footer {
@@ -432,6 +633,38 @@
       margin-bottom: 0;
     }
 
+    @media (max-width: 900px) {
+      .nav-wrap {
+        gap: 1.25rem;
+      }
+
+      .main-nav {
+        gap: clamp(0.7rem, 1.8vw, 1.2rem);
+      }
+
+      .main-nav a {
+        font-size: 0.78rem;
+      }
+
+      .main-nav .nav-cta {
+        padding-right: 0.9rem;
+        padding-left: 0.9rem;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-rows: repeat(2, minmax(160px, 210px));
+      }
+
+      .visit-inner {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+    }
+
     @media (max-width: 760px) {
       .nav-wrap {
         width: min(100% - 2rem, 600px);
@@ -443,7 +676,7 @@
         gap: 0.9rem;
       }
 
-      .main-nav > a:not(.nav-cta) {
+      .main-nav > a:not(.nav-cta):not(:first-child) {
         display: none;
       }
 
@@ -458,8 +691,8 @@
 
       .hero-copy {
         width: min(100%, 650px);
-        justify-self: center;
-        padding: 5rem 1.5rem 4rem;
+        justify-self: start;
+        padding: 4.5rem 1.5rem 3.5rem;
       }
 
       .hero-photo {
@@ -499,6 +732,44 @@
       .about-art {
         min-height: 300px;
       }
+
+      .gallery,
+      .reviews {
+        padding: 5rem 0;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 260px 180px 180px;
+      }
+
+      .gallery-item:first-child {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .review-heading {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .rating-card {
+        align-self: flex-start;
+      }
+
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .visit {
+        padding: 5rem 0;
+      }
+
+      .visit-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -523,8 +794,9 @@
       </a>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#services">Services</a>
-        <a href="#about">Our studio</a>
-        <a href="#visit">Find us</a>
+        <a href="#gallery">Studio</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit</a>
         <a class="nav-cta" href="https://www.fresha.com/a/the-skin-and-brow-spot-countryside-5508-south-brainard-avenue-zenor27i">Book on Fresha</a>
       </nav>
     </div>
@@ -534,47 +806,57 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow">Countryside · Licensed esthetician</p>
-        <h1 id="hero-title">A little time, just for <em>you.</em></h1>
-        <p>Enjoy personalized skin and brow care from a licensed esthetician with 10 years of experience. The Skin and Brow Spot is dedicated to pampering your every need.</p>
+        <h1 id="hero-title">Your moment to feel <em>beautiful.</em></h1>
+        <p>Thoughtful skin, brow, and lash services in a warm Countryside studio. Enjoy care from a licensed esthetician with 10 years of experience.</p>
         <div class="hero-actions">
           <a class="button" href="https://www.fresha.com/a/the-skin-and-brow-spot-countryside-5508-south-brainard-avenue-zenor27i">Book your appointment</a>
           <a class="button button-outline" href="#services">Explore services</a>
         </div>
+        <a class="rating-card" href="https://www.fresha.com/a/the-skin-and-brow-spot-countryside-5508-south-brainard-avenue-zenor27i#reviews">
+          <strong>5.0 <span aria-hidden="true">★★★★★</span></strong>
+          <span>Rated on Fresha · 381 reviews</span>
+        </a>
       </div>
       <div class="hero-photo">
         <img
-          src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&amp;fit=crop&amp;w=1400&amp;q=85"
-          alt="A relaxing facial treatment in a softly lit spa"
+          src="https://images.fresha.com/locations/location-profile-images/75206/2515150/3d0826af-0420-4f3d-a21b-f008dca610c3-TheSkinandBrowSpot-US-Illinois-Countryside-Fresha.jpg?class=venue-gallery-large&amp;f_width=1600&amp;f_quality=85"
+          alt="Treatment room at The Skin and Brow Spot in Countryside"
           fetchpriority="high"
         />
-        <div class="photo-note">A calm moment in your day.</div>
+        <div class="photo-note">A welcoming space, made for you.</div>
       </div>
     </section>
 
     <section class="services" id="services" aria-labelledby="services-title">
       <div class="section-wrap">
         <div class="section-intro">
-          <p class="eyebrow">Care that feels like you</p>
-          <h2 id="services-title">A thoughtful touch, from brows to glow.</h2>
-          <p>Explore brow, skin, waxing, and lash services, then book directly through the studio's Fresha page.</p>
+          <p class="eyebrow">The service menu</p>
+          <h2 id="services-title">A little care, just the way you like it.</h2>
+          <p>From a brow refresh to a restorative facial, explore the studio's most-loved areas of care. View the full menu and current availability on Fresha.</p>
         </div>
         <div class="service-grid">
           <article class="service-card">
             <span class="service-number">01</span>
-            <h3>Brow shaping &amp; tint</h3>
-            <p>Find your shape with brow shaping and brow tint services tailored to your features.</p>
+            <h3>Brows &amp; tinting</h3>
+            <p>Brow shaping and waxing, brow tint, lamination, and lash tint to bring out your natural features.</p>
           </article>
           <article class="service-card">
             <span class="service-number">02</span>
-            <h3>Skin &amp; body care</h3>
-            <p>Choose from facials, micro derms, chemical peels, and body waxing.</p>
+            <h3>Facials &amp; skin</h3>
+            <p>Express, basic, and corrective facials, along with microdermabrasion, chemical peels, and facial add-ons.</p>
           </article>
           <article class="service-card">
             <span class="service-number">03</span>
-            <h3>Lash services</h3>
-            <p>Enhance your look with lash tint, eyelash extensions, or a lash lift.</p>
+            <h3>Lash artistry</h3>
+            <p>Eyelash extensions and fills, lash lifts, and tinting, with appointments tailored to your look.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-number">04</span>
+            <h3>Waxing &amp; permanent makeup</h3>
+            <p>Body waxing and permanent makeup services, including microblading and touch-up appointments.</p>
           </article>
         </div>
+        <p class="gallery-credit">Service details and availability can change. <a href="https://www.fresha.com/a/the-skin-and-brow-spot-countryside-5508-south-brainard-avenue-zenor27i">See the live Fresha menu.</a></p>
       </div>
     </section>
 
@@ -582,30 +864,108 @@
       <div class="section-wrap about-inner">
         <div class="about-art" aria-hidden="true"><span>Feel good<br />in your skin.</span></div>
         <div class="about-copy">
-          <p class="eyebrow">A neighborhood studio</p>
-          <h2 id="about-title">Ten years of thoughtful skin &amp; brow care.</h2>
-          <p>Led by a licensed esthetician with 10 years of experience, The Skin and Brow Spot specializes in brow shaping, body waxing, brow and lash tint, facials, micro derms, chemical peels, eyelash extensions, and lash lifts. The studio is highly rated for its skin and brow services.</p>
+          <p class="eyebrow">A personal approach</p>
+          <h2 id="about-title">Experience you can feel good about.</h2>
+          <p>The Skin and Brow Spot is dedicated to making every visit feel like time well spent. With 10 years of experience as a licensed esthetician, the studio brings care and attention to every brow, skin, and lash appointment.</p>
           <a class="button button-outline" href="https://www.fresha.com/a/the-skin-and-brow-spot-countryside-5508-south-brainard-avenue-zenor27i">Book on Fresha</a>
         </div>
       </div>
     </section>
 
+    <section class="gallery" id="gallery" aria-labelledby="gallery-title">
+      <div class="section-wrap">
+        <div class="section-intro">
+          <p class="eyebrow">A peek inside</p>
+          <h2 id="gallery-title">A calm space to make time for you.</h2>
+          <p>Take a look around the studio and get a feel for where your next appointment begins.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="https://images.fresha.com/locations/location-profile-images/75206/2515151/4e5e0be6-42b5-4ca7-b5df-3a5028c71780-TheSkinandBrowSpot-US-Illinois-Countryside-Fresha.jpg?class=venue-gallery-large&amp;f_width=1100&amp;f_quality=80" alt="Treatment bed and decor inside the studio" loading="lazy" decoding="async" />
+            <figcaption>A serene treatment space</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.fresha.com/locations/location-profile-images/75206/2515152/a61bd69d-4c85-43cb-82cc-c43a5b591453-TheSkinandBrowSpot-US-Illinois-Countryside-Fresha.jpg?class=venue-gallery-large&amp;f_width=900&amp;f_quality=80" alt="Cozy wellness room at The Skin and Brow Spot" loading="lazy" decoding="async" />
+            <figcaption>Room to relax</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.fresha.com/locations/location-profile-images/75206/2515156/5be1f4a5-92da-40a5-883c-20c6373b409a-TheSkinandBrowSpot-US-Illinois-Countryside-Fresha.jpg?class=venue-gallery-large&amp;f_width=900&amp;f_quality=80" alt="Lash extension service in progress at the studio" loading="lazy" decoding="async" />
+            <figcaption>Lash artistry</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.fresha.com/locations/location-profile-images/75206/2515157/3c842510-10a6-43b9-993d-c2497de56581-TheSkinandBrowSpot-US-Illinois-Countryside-Fresha.jpg?class=venue-gallery-large&amp;f_width=900&amp;f_quality=80" alt="Welcoming interior at The Skin and Brow Spot" loading="lazy" decoding="async" />
+            <figcaption>A warm welcome</figcaption>
+          </figure>
+          <figure class="gallery-item">
+            <img src="https://images.fresha.com/locations/location-profile-images/75206/2515158/4496e74b-74c4-4f44-8f05-55f008d8c73a-TheSkinandBrowSpot-US-Illinois-Countryside-Fresha.jpg?class=venue-gallery-large&amp;f_width=900&amp;f_quality=80" alt="Treatment chair in a peaceful studio room" loading="lazy" decoding="async" />
+            <figcaption>Space to unwind</figcaption>
+          </figure>
+        </div>
+        <p class="gallery-credit">Studio photos from <a href="https://www.fresha.com/a/the-skin-and-brow-spot-countryside-5508-south-brainard-avenue-zenor27i">The Skin and Brow Spot on Fresha</a>.</p>
+      </div>
+    </section>
+
+    <section class="reviews" id="reviews" aria-labelledby="reviews-title">
+      <div class="section-wrap">
+        <div class="review-heading">
+          <div class="section-intro">
+            <p class="eyebrow">Kind words</p>
+            <h2 id="reviews-title">Loved by the Fresha community.</h2>
+            <p>Recent clients share what they appreciate about their visits.</p>
+          </div>
+          <a class="rating-card" href="https://www.fresha.com/a/the-skin-and-brow-spot-countryside-5508-south-brainard-avenue-zenor27i#reviews">
+            <strong>5.0 <span aria-hidden="true">★★★★★</span></strong>
+            <span>381 reviews on Fresha</span>
+          </a>
+        </div>
+        <div class="review-grid">
+          <article class="review-card">
+            <div class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+            <p>Giovanna says the studio consistently does a great job.</p>
+            <footer>Giovanna I. · Fresha review</footer>
+          </article>
+          <article class="review-card">
+            <div class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+            <p>Rina praises her lash artist's professionalism and friendly approach, and says she feels comfortable and happy with her service.</p>
+            <footer>Rina M. · Fresha review</footer>
+          </article>
+          <article class="review-card">
+            <div class="review-stars" role="img" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
+            <p>Eric is delighted with his brows and recommends Laura for her sweet, helpful service.</p>
+            <footer>Eric S. · Fresha review</footer>
+          </article>
+        </div>
+        <p class="review-source">Review highlights are paraphrased from public Fresha reviews checked October 2, 2026. <a href="https://www.fresha.com/a/the-skin-and-brow-spot-countryside-5508-south-brainard-avenue-zenor27i#reviews">Read the full reviews on Fresha.</a></p>
+      </div>
+    </section>
+
     <section class="visit" id="visit" aria-labelledby="visit-title">
-      <div class="section-wrap visit-content">
-        <p class="eyebrow">Find us in Countryside</p>
-        <h2 id="visit-title">Your next little reset starts here.</h2>
-        <p>Ready to book skin or brow care? Visit the studio's Fresha page to view services and make an appointment.</p>
+      <div class="section-wrap visit-inner">
+        <div class="visit-content">
+          <p class="eyebrow">Find your way here</p>
+          <h2 id="visit-title">A little self-care, close to home.</h2>
+          <p>Located on South Brainard Avenue in Countryside. Book online through Fresha, where you can check current availability and service details.</p>
+        </div>
         <div class="contact-card">
           <strong>The Skin and Brow Spot</strong>
-          <p>South Brainard Avenue · Countryside</p>
-          <p><a class="button" href="https://www.fresha.com/a/the-skin-and-brow-spot-countryside-5508-south-brainard-avenue-zenor27i">Book directly on Fresha</a></p>
+          <p><a href="https://maps.google.com/?q=5508+South+Brainard+Avenue+Unit+1+Countryside+IL+60525">5508 South Brainard Avenue, Unit 1<br />Countryside, IL 60525</a></p>
+          <p><a href="tel:+17085579983">(708) 557-9983</a></p>
+          <dl class="hours" aria-label="Hours listed on Fresha">
+            <dt>Tuesday</dt><dd>9:00 am – 1:00 pm</dd>
+            <dt>Wednesday</dt><dd>9:00 am – 7:30 pm</dd>
+            <dt>Thursday</dt><dd>12:00 pm – 6:00 pm</dd>
+            <dt>Friday</dt><dd>9:00 am – 5:00 pm</dd>
+            <dt>Saturday</dt><dd>9:00 am – 12:00 pm</dd>
+          </dl>
+          <p class="hours-note">Hours and appointment availability can change; check Fresha for the latest schedule.</p>
+          <a class="button" href="https://www.fresha.com/a/the-skin-and-brow-spot-countryside-5508-south-brainard-avenue-zenor27i">Book directly on Fresha</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>&copy; <span id="year">2026</span> The Skin and Brow Spot · Countryside</p>
+    <p>&copy; <span id="year">2026</span> The Skin and Brow Spot · Countryside · <a href="https://www.fresha.com/a/the-skin-and-brow-spot-countryside-5508-south-brainard-avenue-zenor27i">Book on Fresha</a></p>
   </footer>
 </body>
 </html>
